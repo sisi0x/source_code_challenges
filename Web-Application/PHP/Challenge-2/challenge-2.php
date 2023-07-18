@@ -5,21 +5,18 @@
 
 if(isset($_GET["name"])){
  
-  $se = htmlentities($_GET["name"]);
-  $str ="echo \"Hello".$se."!!!!\";";
-    if($_GET['name'] !== ""){
+  $str = "echo \"Hello".$_GET["name"]."!!!!\";";
 
-      eval($se);
+      eval($str);
       
-    }
-     die();
+   
 }
 ?>
 
 <body>
   
       <form action="" method="Get">
-        <input type="search" name="messageId">
+        <input type="search" name="name">
         <input type="submit" value="submit">
     </form>
     </h1>
